@@ -1,0 +1,7 @@
+exec multiotp {
+        wait = yes
+        input_pairs = request
+        output_pairs = reply
+        program = "/opt/otp/auth.py  '%{User-Name}' '%{User-Password}'"
+        shell_escape = yes
+}
